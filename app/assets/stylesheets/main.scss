@@ -1,0 +1,41 @@
+$text-color: #000000;
+$page-width: 1000px ;
+$error-color: #82291A;
+$link-color: #8ED455;
+$subtle: #999;
+$list-item-color: #FFF;
+$main-background: #BABABA;
+$body-background: #F5F5F5;
+$header-background: #000;
+$header-font-color: white;
+$subtle-background: rgba(1,1,1,0.1);
+$hover: rgba(50,50,50,0.1);
+$user-highlight: #00A84D;
+$property-highlight: #84D5FE;
+
+label.req:after {
+  content: "*"; 
+}
+
+#map {
+  height: 500px;
+  position: relative;
+}
+
+#flash {
+  float: right;
+}
+
+#header-container {
+  background: $header-background;
+  height: 60px;
+  h1, h2, h3, h4, h5 {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.pagination {
+  text-align: center;
+}
