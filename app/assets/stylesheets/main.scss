@@ -17,11 +17,6 @@ label.req:after {
   content: "*"; 
 }
 
-#map {
-  height: 500px;
-  position: relative;
-}
-
 #flash {
   float: right;
 }
@@ -38,4 +33,9 @@ label.req:after {
 
 .pagination {
   text-align: center;
+}
+
+.entry-poster img {
+  width: 150px;
+  height: 200px;
 }

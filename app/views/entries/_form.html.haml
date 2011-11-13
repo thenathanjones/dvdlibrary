@@ -1,0 +1,26 @@
+= form_for(@entry) do |f|
+  - if @entry.errors.any?
+    #error_explanation
+      %ul
+        - @entry.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :year
+    = f.text_field :year
+  %p= "The following will be populated where possible by IMDB"
+  .field
+    = f.label :plot
+    = f.text_area :plot
+  .field
+    = f.label :rating
+    = f.text_field :rating
+  .field
+    = f.label :poster
+    = f.text_field :poster
+  .actions
+    = f.submit @entry.new_record? ? "Create" : "Save", :disable_with => "Saving…", :class => "btn primary"
+    = link_to "Cancel", entries_path, :class => "btn"

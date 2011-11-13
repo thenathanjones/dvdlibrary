@@ -1,0 +1,18 @@
+.searchbar.row
+  = form_tag entries_path, :method => :get, :class => "form-stacked span9 offset4" do
+    = search_field_tag :search, params[:search], :class => "query xlarge"
+    = submit_tag "Search", :class => "btn"
+    .info Filter by Title.
+
+.entries.row    
+  .span16.columns
+    %table.zebra-striped
+      %tbody
+        = render :partial => "entry", :collection => @entries
+  
+    .pagination.row
+      = will_paginate @entries
+      = page_entries_info @entries
+
+.actions
+  = link_to "Create", new_entry_path, :class => "btn"
