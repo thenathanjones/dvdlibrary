@@ -1,10 +1,13 @@
 %tr
   %td
-    .row
+    .row.entry
       .entry-poster.span3.columns
         = image_tag entry.poster
       .entry-details.span12.columns 
         %h3= "#{entry.title} - #{entry.year}"
+        %h5= "| "
+        - entry.actors.each do |a|
+          %h5= "#{a.name} |"
         .actions
           = link_to "View", entry_path(entry), {:class => "btn"}
           = link_to "Edit", edit_entry_path(entry), {:class => "btn"}

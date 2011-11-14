@@ -116,6 +116,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0.rc)
   haml
   jquery-rails
+  json
   pg
   rails (= 3.1.0.rc8)
   sass-rails (~> 3.1.0.rc)

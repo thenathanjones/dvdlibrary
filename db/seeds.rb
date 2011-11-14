@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+CSV.open('db/csv/dvdlist.csv', 'r').each do |row|
+  if (row[0]) 
+    Entry.find_or_create_by_title(row[0].strip)
+  end
+end
