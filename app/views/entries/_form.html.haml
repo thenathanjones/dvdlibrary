@@ -16,9 +16,6 @@
     #plot.clearfix
       = f.label :plot
       = f.text_area :plot, :rows => 10, :class => "xxlarge"
-    #rating.clearfix
-      = f.label :rating
-      = f.text_field :rating, :class => "small"
     .actions
       = f.submit @entry.new_record? ? "Create" : "Save", :disable_with => "Saving…", :class => "btn primary"
       = link_to "Cancel", entries_path, :class => "btn"

@@ -14,9 +14,20 @@
       %h2 Plot
       %p= @entry.plot
       
-    #rating
-      %h2 Rating
-      %p= @entry.rating
+    #actors
+      %h2 Actors
+      - @entry.actors.each do |a|
+        %p= "#{a.name} |"
+        
+    #directors
+      %h2 Directors
+      - @entry.directors.each do |d|
+        %p= "#{d.name} |"
+        
+    #genres
+      %h2 Genres
+      - @entry.genres.each do |g|
+        %p= "#{g.name} |"
   
 .actions
   =link_to 'Edit', edit_entry_path(@entry), :class => "btn"
