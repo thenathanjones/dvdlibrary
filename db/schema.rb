@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20111113104620) do
   create_table "entries", :force => true do |t|
     t.string   "title"
     t.string   "year"
-    t.string   "plot"
+    t.text     "plot"
     t.string   "rating"
     t.string   "poster"
     t.datetime "created_at"

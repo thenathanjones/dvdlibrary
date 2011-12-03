@@ -1,0 +1,23 @@
+.entry.row
+  .span4
+    = image_tag @entry.poster
+  .span12
+    #title
+      %h2.strong Title
+      %p= @entry.title
+      
+    #year
+      %h2 Year
+      %p= @entry.year
+      
+    #plot
+      %h2 Plot
+      %p= @entry.plot
+      
+    #rating
+      %h2 Rating
+      %p= @entry.rating
+  
+.actions
+  =link_to 'Edit', edit_entry_path(@entry), :class => "btn"
+  =link_to 'Back to Search', entries_path, :class => "btn"

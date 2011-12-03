@@ -4,6 +4,7 @@ gem 'rails', '3.1.0.rc8'
 gem 'haml'
 gem 'will_paginate', '~> 3.0.0'
 gem 'json'
+gem 'aws-s3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
